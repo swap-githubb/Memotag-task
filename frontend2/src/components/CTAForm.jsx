@@ -101,7 +101,7 @@ const CTAForm = () => {
       // In dev, '/api' is proxied to localhost:5000; in prod, we call the real backend directly
       const base = import.meta.env.DEV
         ? '/api'
-        : 'https://your-backend-domain.com/api'
+        : 'https://memotag-task-backend.onrender.com/api'
       await axios.post(`${base}/contact`, formData)
       setStatus('SUCCESS')
       setFormData({ name: '', email: '', message: '' })
